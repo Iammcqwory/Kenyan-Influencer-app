@@ -1,57 +1,55 @@
 import streamlit as st
 
 # Set the app title
-st.title("Personalized Nutrition and Wellness Platform")
+st.title("Kenyan Influencer App")
 
 # Create a sidebar menu
 st.sidebar.title("Menu")
-menu_options = ["Home", "Nutrition Plans", "Workout Routines", "Progress Tracking"]
+menu_options = ["Home", "Influencers", "Campaigns", "Analytics"]
 selected_menu = st.sidebar.radio("Select an option", menu_options)
 
 # Home page
 if selected_menu == "Home":
-    st.header("Welcome to the Personalized Nutrition and Wellness Platform!")
-    st.write("This platform offers personalized nutrition and wellness plans based on your health goals, dietary preferences, and lifestyle.")
+    st.header("Welcome to the Kenyan Influencer App!")
+    st.write("This app provides information and tools for Kenyan influencers.")
 
-# Nutrition Plans page
-elif selected_menu == "Nutrition Plans":
-    st.header("Nutrition Plans")
-    st.write("Choose a nutrition plan that suits your needs:")
+# Influencers page
+elif selected_menu == "Influencers":
+    st.header("Kenyan Influencers")
+    st.write("Here are some popular Kenyan influencers:")
 
-    nutrition_plans = [
-        {"name": "Weight Loss Plan", "description": "A plan designed to help you lose weight."},
-        {"name": "Muscle Building Plan", "description": "A plan designed to help you build muscle."},
-        {"name": "General Wellness Plan", "description": "A plan focused on overall health and well-being."}
+    influencers = [
+        {"name": "Influencer 1", "followers": 10000},
+        {"name": "Influencer 2", "followers": 5000},
+        {"name": "Influencer 3", "followers": 20000}
     ]
 
-    for plan in nutrition_plans:
-        st.write(f"Name: {plan['name']}")
-        st.write(f"Description: {plan['description']}")
+    for influencer in influencers:
+        st.write(f"Name: {influencer['name']}")
+        st.write(f"Followers: {influencer['followers']}")
         st.write("---")
 
-# Workout Routines page
-elif selected_menu == "Workout Routines":
-    st.header("Workout Routines")
-    st.write("Choose a workout routine that suits your goals and fitness level:")
+# Campaigns page
+elif selected_menu == "Campaigns":
+    st.header("Campaigns")
+    st.write("Here are some ongoing campaigns in Kenya:")
 
-    workout_routines = [
-        {"name": "Beginner's Workout", "description": "A workout routine suitable for beginners."},
-        {"name": "Intermediate Workout", "description": "A workout routine for those with some fitness experience."},
-        {"name": "Advanced Workout", "description": "A challenging workout routine for advanced fitness levels."}
+    campaigns = [
+        {"name": "Campaign 1", "brand": "Brand 1", "budget": "$1000"},
+        {"name": "Campaign 2", "brand": "Brand 2", "budget": "$500"},
+        {"name": "Campaign 3", "brand": "Brand 3", "budget": "$2000"}
     ]
 
-    for routine in workout_routines:
-        st.write(f"Name: {routine['name']}")
-        st.write(f"Description: {routine['description']}")
+    for campaign in campaigns:
+        st.write(f"Name: {campaign['name']}")
+        st.write(f"Brand: {campaign['brand']}")
+        st.write(f"Budget: {campaign['budget']}")
         st.write("---")
 
-# Progress Tracking page
-elif selected_menu == "Progress Tracking":
-    st.header("Progress Tracking")
-    st.write("Track your progress and view your achievements:")
+# Analytics page
+elif selected_menu == "Analytics":
+    st.header("Analytics")
+    st.write("View analytics for your influencer campaigns in Kenya.")
 
-    # Add progress tracking and achievements code here
-
-    st.write("Coming soon!")
-
+    # Add your analytics code here
 
